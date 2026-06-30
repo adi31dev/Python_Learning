@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Happy Birthday! 🎂</title>
+    <style>
+        body {
+            background-color: #fff5f7;
+            font-family: 'Georgia', serif;
+            text-align: center;
+            padding: 60px;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        h1 {
+            color: #ff69b4;
+            font-size: 60px;
+            margin-bottom: 10px;
+        }
+        .name {
+            color: #ff1493;
+            font-size: 45px;
+            font-style: italic;
+        }
+        .message {
+            color: #666;
+            font-size: 50px;
+            margin-top: 30px;
+            line-height: 1.8;
+        }
+        .emoji {
+            font-size: 50px;
+            margin: 20px;
+        
+        }
+        .wishes {
+            font-size: 30px;
+            color: #888;
+            line-height: 2;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            padding: 40px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <img src="{{ url_for('static', filename='ghibli.png') }}" width="300" style="border-radius: 20px; margin: 20px;">
+        </div>
+        <div class="right">
+            <div class="emoji">🎂🌸🎉</div>
+    <h1>Happy Birthday!</h1>
+    <p class="name">{{person.name}}🧁</p>
+    {% for wish in wishes%}
+        <p class="wishes">{{wish}}</p>
+    {% endfor%}
+    <p class="message">{{person.message}}</p>
+    <div class="emoji">💕✨🎈</div>
+     </div>
+    </div> 
+</body>
+</html>
+      
